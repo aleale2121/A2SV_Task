@@ -4,7 +4,7 @@ using BLOGAPP.Application.DTOs.Common;
 
 namespace BLOGAPP.Application.DTOs.Comment;
 
-public class CommentUpdateDTO : BaseDto, CommentCommonDTO
+public class CommentUpdateDTO : BaseDto, ICommentDTO
 {
     public string UpdatedBy { get; set; }
 }

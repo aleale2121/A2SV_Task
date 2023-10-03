@@ -3,8 +3,10 @@ using System.Collections.Generic;
 
 namespace BLOGAPP.Application.DTOs.Comment;
 
-public interface CommentCommonDTO
+public class CommentDTO: BaseDto,ICommentDTO
 {
-    public int Postid {get; set;}
-    public string Text { get; set; }
+    public DateTime DateCreated { get; set; }
+    public string CreatedBy { get; set; }
+    public DateTime LastModifiedDate { get; set; }
+    public string LastModifiedBy { get; set; }
 }
