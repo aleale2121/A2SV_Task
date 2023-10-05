@@ -1,17 +1,18 @@
 ﻿using FluentValidation;
-using BLOGAPP.Contracts.Persistence;
+using BLOGAPP.Application.Contracts.Persistence;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using BLOGAPP.Application.DTOs.Post;
 
 namespace BLOGAPP.Application.DTOs.Post.Validators;
 
 public class UpdatePostDtoValidator : AbstractValidator<PostUpdateDTO>
 {
 
-    public UpdatePostDtoValidator()
+    public  UpdatePostDtoValidator()
     {
         Include(new IPostDtoValidator());
         

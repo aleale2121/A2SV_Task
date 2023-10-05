@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using  BLOGAPP.Application.DTOs.Comment;
 
 namespace BLOGAPP.Application.DTOs.Comment.Validators;
 

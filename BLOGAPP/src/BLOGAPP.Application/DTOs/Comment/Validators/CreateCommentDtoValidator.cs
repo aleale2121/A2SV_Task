@@ -2,10 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using  BLOGAPP.Application.DTOs.Comment;
 
 namespace BLOGAPP.Application.DTOs.Comment.Validators;
 
-public class CreateCommentDtoValidator : AbstractValidator<CommentCommonDTO>
+public class CreateCommentDtoValidator : AbstractValidator<CommentCreateDTO>
 {
     public CreateCommentDtoValidator()
     {
