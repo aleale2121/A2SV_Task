@@ -8,6 +8,6 @@ namespace BLOGAPP.Application.Contracts.Persistence;
 
 public interface IPostRepository : IGenericRepository<Post>
 {
-    Task<List<Post>> GetPostsWithDetails(string postId);
+    Task<List<Post>> GetPostsWithDetails();
 }
 
