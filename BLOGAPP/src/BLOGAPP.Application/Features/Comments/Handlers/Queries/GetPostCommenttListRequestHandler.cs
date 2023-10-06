@@ -42,7 +42,7 @@ public class GetPostCommentListRequestHandler : IRequestHandler<GetPostCommentLi
         var comments = new List<Comment>();
         var commentDTOs = new List<CommentDTO>();
 
-        comments = await _commentRepository.GetPostComments();
+        comments = await _commentRepository.GetPostComments(request.PostId);
         commentDTOs = _mapper.Map<List<CommentDTO>>(comments);
         return commentDTOs;
     }

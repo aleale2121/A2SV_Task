@@ -8,6 +8,6 @@ namespace BLOGAPP.Application.Contracts.Persistence;
 
 public interface ICommentRepository : IGenericRepository<Comment>
 {
-    Task<List<Comment>> GetPostComments();
+    Task<List<Comment>> GetPostComments(int postId);
 }
 

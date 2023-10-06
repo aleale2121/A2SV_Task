@@ -13,7 +13,8 @@ public class UpdateCommentDtoValidator : AbstractValidator<CommentUpdateDTO>
         Include(new ICommentDtoValidator());
 
         RuleFor(p => p.Id).NotNull().WithMessage("{PropertyName} must be present");
-
+        RuleFor(p => p.UpdatedBy)
+                    .NotEmpty().WithMessage("{PropertyName} is required.");
         RuleFor(p => p.UpdatedBy)
             .NotEmpty().WithMessage("{PropertyName} is required.")
             .MaximumLength(20).WithMessage("{PropertyName} cannot exceed 100 characters.");    }
