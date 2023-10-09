@@ -14,7 +14,7 @@ public static class PersistenceServicesRegistration
     public static IServiceCollection ConfigurePersistenceServices(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContext<BLOGAPPDbContext>(options =>
-            options.UseSqlServer(
+            options.UseNpgsql(
                 configuration.GetConnectionString("BlogAppConnectionString")));
 
 
