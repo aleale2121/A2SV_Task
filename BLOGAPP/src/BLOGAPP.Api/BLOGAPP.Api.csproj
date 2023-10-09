@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BLOGAPP.Application\BLOGAPP.Application.csproj" />
     <ProjectReference Include="..\BLOGAPP.Persistence\BLOGAPP.Persistence.csproj" />
+    <ProjectReference Include="..\BLOGAPP.Identity\BLOGAPP.Identity.csproj" />
   </ItemGroup>
 
 </Project>
