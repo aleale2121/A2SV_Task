@@ -112,7 +112,7 @@ public class Startup
             c.SwaggerDoc("v1", new OpenApiInfo
             {
                 Version = "v1",
-                Title = "HR Leave Management Api",
+                Title = "BLOGAPP Api",
 
             });
 

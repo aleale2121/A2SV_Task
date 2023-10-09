@@ -16,7 +16,7 @@ namespace BLOGAPP.Api.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-[Authorize]
+// [Authorize]
 public class PostsController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -32,17 +32,18 @@ public class PostsController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<List<PostDTO>>> Get()
     {
+        System.Console.WriteLine("HERE");
         var posts = await _mediator.Send(new GetPostListRequest());
         return Ok(posts);
     }
 
-        // GET: api/<PostsController>/detailed
-    [HttpGet("detailed")]
-    public async Task<ActionResult<List<PostDTO>>> GetPostsWithDetails()
-    {
-        var posts = await _mediator.Send(new GetPostListRequest());
-        return Ok(posts);
-    }
+    // GET: api/<PostsController>/detailed
+    // [HttpGet("detailed")]
+    // public async Task<ActionResult<List<PostDTO>>> GetPostsWithDetails()
+    // {
+    //     var posts = await _mediator.Send(new GetPostListRequest());
+    //     return Ok(posts);
+    // }
 
     // GET api/<PostsController>/5
     [HttpGet("{id}")]
