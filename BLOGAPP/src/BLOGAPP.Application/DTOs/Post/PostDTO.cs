@@ -13,6 +13,6 @@ public class PostDTO : BaseDto, IPostDTO
     public string CreatedBy { get; set; }
     public DateTime LastModifiedDate { get; set; }
     public string LastModifiedBy { get; set; }
-    public List<CommentDTO>? Comments {get;}
+    public List<CommentDTO> Comments {get;}
 }
 

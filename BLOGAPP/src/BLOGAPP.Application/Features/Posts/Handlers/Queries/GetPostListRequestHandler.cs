@@ -16,15 +16,12 @@ public class GetPostListRequestHandler : IRequestHandler<GetPostListRequest, Lis
 {
     private readonly IPostRepository _postRepository;
     private readonly IMapper _mapper;
-    private readonly IHttpContextAccessor _httpContextAccessor;
 
     public GetPostListRequestHandler(IPostRepository postRepository,
-            IMapper mapper,
-            IHttpContextAccessor httpContextAccessor)
+            IMapper mapper)
     {
         _postRepository = postRepository;
         _mapper = mapper;
-        this._httpContextAccessor = httpContextAccessor;
     }
 
     public async Task<List<PostDTO>> Handle(GetPostListRequest request, CancellationToken cancellationToken)

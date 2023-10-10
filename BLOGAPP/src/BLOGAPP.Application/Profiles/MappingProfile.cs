@@ -13,7 +13,14 @@ public class MappingProfile : Profile
 {
     public MappingProfile()
     {
-        CreateMap<Post, PostDTO>().ReverseMap();
+        // CreateMap<Post, PostDTO>().ReverseMap();
+         CreateMap<Post, PostDTO>()
+                .ForMember(dest => dest.Comments, opt => opt.MapFrom(src => src.Comments.Select(comment => new CommentDTO
+                {
+                    Id = comment.Id,
+                    Text = comment.Text,
+                })))
+                .ReverseMap();
         CreateMap<Post, PostCreateDTO>().ReverseMap();
         CreateMap<Post, PostUpdateDTO>().ReverseMap();
 

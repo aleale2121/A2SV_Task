@@ -37,13 +37,13 @@ public class PostsController : ControllerBase
         return Ok(posts);
     }
 
-    // GET: api/<PostsController>/detailed
-    // [HttpGet("detailed")]
-    // public async Task<ActionResult<List<PostDTO>>> GetPostsWithDetails()
-    // {
-    //     var posts = await _mediator.Send(new GetPostListRequest());
-    //     return Ok(posts);
-    // }
+    GET: api/<PostsController>/detailed
+    [HttpGet("detailed")]
+    public async Task<ActionResult<List<PostDTO>>> GetPostsWithDetails()
+    {
+        var posts = await _mediator.Send(new GetPostListRequest());
+        return Ok(posts);
+    }
 
     // GET api/<PostsController>/5
     [HttpGet("{id}")]
