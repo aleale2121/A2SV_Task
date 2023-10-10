@@ -10,10 +10,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="*" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="*" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="*" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="*" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="*" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="*" />
     <PackageReference Include="Newtonsoft.Json" Version="*" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="*" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="*" />
   </ItemGroup>
 

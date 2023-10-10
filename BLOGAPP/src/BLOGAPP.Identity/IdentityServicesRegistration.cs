@@ -23,7 +23,7 @@ public static class IdentityServicesRegistration
         services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
 
         services.AddDbContext<BLOGAPPIdentityDbContext>(options => 
-            options.UseSqlServer(configuration.GetConnectionString("BlogAppIdentityConnectionString"),
+            options.UseNpgsql(configuration.GetConnectionString("BlogAppIdentityConnectionString"),
             b => b.MigrationsAssembly(typeof(BLOGAPPIdentityDbContext).Assembly.FullName)));
 
         services.AddIdentity<ApplicationUser, IdentityRole>()
